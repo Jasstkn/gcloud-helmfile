@@ -15,7 +15,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: mariarti/gcloud-helmfile
+  IMAGE_NAME: gcloud-helmfile
 
 jobs:
   # Run tests.
