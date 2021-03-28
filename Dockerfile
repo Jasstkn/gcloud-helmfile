@@ -12,6 +12,7 @@ ADD https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION
 RUN chmod +x /usr/local/bin/kubectl
 
 ADD https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz /tmp
+
 RUN tar -zxvf /tmp/helm* -C /tmp \
     && mv /tmp/linux-amd64/helm /bin/helm \
     && rm -rf /tmp/*
