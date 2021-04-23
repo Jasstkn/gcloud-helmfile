@@ -6,6 +6,8 @@ name: lint
 on:
   # Trigger mega-linter at every push. Action will also be visible from Pull Requests to master
   push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
+    paths-ignore:
+    - README.md
   pull_request:
     branches: [main]
 
