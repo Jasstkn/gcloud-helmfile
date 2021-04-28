@@ -16,7 +16,7 @@ ADD https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz /tmp
 
 RUN tar -zxvf /tmp/helm* -C /tmp \
     && mv /tmp/linux-amd64/helm /bin/helm \
-    && rm -rf /tmp/*
+    && rm -rf /tmp/* \
     && helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION}
 
 ADD https://github.com/roboll/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 /bin/helmfile
