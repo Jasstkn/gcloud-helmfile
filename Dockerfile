@@ -3,7 +3,7 @@ FROM gcr.io/google.com/cloudsdktool/cloud-sdk:340.0.0-alpine
 ARG KUBECTL_VERSION=1.20.6
 ARG HELM_VERSION=3.5.4
 ARG HELM_DIFF_VERSION=3.1.3
-ARG HELMFILE_VERSION=0.138.7
+ARG HELMFILE_VERSION=0.139.3
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache ca-certificates git bash curl jq
