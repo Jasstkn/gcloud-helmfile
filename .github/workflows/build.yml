@@ -27,6 +27,7 @@ jobs:
         if [ "${{ github.event_name }}" = "push" ]; then
           TAGS="$TAGS,${DOCKER_IMAGE}:${GITHUB_SHA::8}"
         fi
+        echo "::set-output name=sha_short::${GITHUB_SHA::8}"
         echo ::set-output name=version::${VERSION}
         echo ::set-output name=tags::${TAGS}
         echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
@@ -54,7 +55,7 @@ jobs:
       name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: 'docker.io/mariarti/gcloud-helmfile:${GITHUB_SHA::8}'
+        image-ref: 'docker.io/mariarti/gcloud-helmfile:${{ steps.prep.outputs.sha_short }}'
         format: 'table'
         exit-code: '1'
         ignore-unfixed: true
