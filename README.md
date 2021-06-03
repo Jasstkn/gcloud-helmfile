@@ -6,8 +6,8 @@
 <!-- markdown-link-check-enable -->
 
 - gcloud `343.0.0-alpine`
-- kubectl: `1.21.0`
-- helm: `3.5.4`
+- kubectl: `1.21.1`
+- helm: `3.6.0`
 - helm-diff: `3.1.3`
-- helmfile: `0.139.3` 
+- helmfile: `0.139.7` 
 
