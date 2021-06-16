@@ -1,4 +1,4 @@
-FROM gcr.io/google.com/cloudsdktool/cloud-sdk:344.0.0-alpine
+FROM gcr.io/google.com/cloudsdktool/cloud-sdk:345.0.0-alpine
 
 ARG KUBECTL_VERSION=1.21.1
 ARG HELM_VERSION=3.6.0
