@@ -10,4 +10,3 @@
 - helm: `3.6.1`
 - helm-diff: `3.1.3`
 - helmfile: `0.139.9` 
-
