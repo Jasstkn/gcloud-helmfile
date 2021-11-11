@@ -9,4 +9,4 @@
 - kubectl: `1.22.3`
 - helm: `3.6.3`
 - helm-diff: `3.1.3`
-- helmfile: `0.140.0` 
+- helmfile: `0.142.0` 
