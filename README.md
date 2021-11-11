@@ -7,6 +7,6 @@
 
 - gcloud `364.0.0-alpine`
 - kubectl: `1.22.3`
-- helm: `3.6.3`
+- helm: `3.7.1`
 - helm-diff: `3.1.3`
 - helmfile: `0.142.0` 
