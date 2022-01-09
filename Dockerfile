@@ -2,7 +2,7 @@ FROM gcr.io/google.com/cloudsdktool/cloud-sdk:367.0.0-alpine
 
 ARG KUBECTL_VERSION=1.22.3
 ARG HELM_VERSION=3.7.1
-ARG HELM_DIFF_VERSION=3.1.3
+ARG HELM_DIFF_VERSION=3.2.0
 ARG HELMFILE_VERSION=0.142.0
 
 # hadolint ignore=DL3018
