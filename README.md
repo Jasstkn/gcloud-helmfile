@@ -5,7 +5,7 @@
 [![lint](https://github.com/Jasstkn/gcloud-helmfile/actions/workflows/lint.yaml/badge.svg)](https://github.com/Jasstkn/gcloud-helmfile/actions/workflows/lint.yaml)
 <!-- markdown-link-check-enable -->
 
-- gcloud `386.0.0-alpine`
+- gcloud `387.0.0-alpine`
 - kubectl: `1.23.4`
 - helm: `3.8.0`
 - helm-diff: `3.4.2`
