@@ -3,7 +3,7 @@ FROM gcr.io/google.com/cloudsdktool/cloud-sdk:392.0.0-alpine
 ARG KUBECTL_VERSION=1.23.4
 ARG HELM_VERSION=3.8.0
 ARG HELM_DIFF_VERSION=3.4.2
-ARG HELMFILE_VERSION=0.143.0
+ARG HELMFILE_VERSION=0.145.2
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache ca-certificates git bash curl jq
@@ -19,7 +19,7 @@ RUN tar -zxvf /tmp/helm* -C /tmp \
     && rm -rf /tmp/* \
     && helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION}
 
-ADD https://github.com/roboll/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 /bin/helmfile
+ADD https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_${HELMFILE_VERSION}_linux_amd64.tar.gz /bin/helmfile
 
 RUN chmod 0755 /bin/helmfile
 
