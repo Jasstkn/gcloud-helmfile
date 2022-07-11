@@ -19,7 +19,7 @@ RUN tar -zxvf /tmp/helm* -C /tmp \
     && rm -rf /tmp/* \
     && helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION}
 
-ADD https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 /bin/helmfile
+ADD https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_${HELMFILE_VERSION}_linux_amd64.tar.gz /bin/helmfile
 
 RUN chmod 0755 /bin/helmfile
 
