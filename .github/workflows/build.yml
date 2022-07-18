@@ -14,11 +14,11 @@ jobs:
       run: |
         DOCKER_IMAGE="mariarti/gcloud-helmfile"
         VERSION="edge"
-        if [[ $GITHUB_REF == refs/tags/* ]]; then
+        if [[ "$GITHUB_REF" == refs/tags/* ]]; then
           VERSION=${GITHUB_REF#refs/tags/}
-        elif [[ $GITHUB_REF == refs/heads/* ]]; then
+        elif [[ "$GITHUB_REF" == refs/heads/* ]]; then
           VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's#/+#-#g')
-        elif [[ $GITHUB_REF == refs/pull/* ]]; then
+        elif [[ "$GITHUB_REF" == refs/pull/* ]]; then
           VERSION=pr-${{ github.event.number }}
         fi
         TAGS="${DOCKER_IMAGE}:${VERSION}"
