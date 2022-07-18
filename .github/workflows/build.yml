@@ -12,8 +12,8 @@ jobs:
     - name: Prepare
       id: prep
       run: |
-        DOCKER_IMAGE=mariarti/gcloud-helmfile
-        VERSION=edge
+        DOCKER_IMAGE="mariarti/gcloud-helmfile"
+        VERSION="edge"
         if [[ $GITHUB_REF == refs/tags/* ]]; then
           VERSION=${GITHUB_REF#refs/tags/}
         elif [[ $GITHUB_REF == refs/heads/* ]]; then
