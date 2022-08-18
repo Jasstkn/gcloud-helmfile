@@ -46,6 +46,7 @@ jobs:
           DISABLE: COPYPASTE,SPELL # Uncomment to disable copy-paste and spell checks
           REPOSITORY_TRIVY_DISABLE_ERRORS: true
           REPOSITORY_SEMGREP_DISABLE_ERRORS: true
+          REPOSITORY_CHECKOV_DISABLE_ERRORS: true
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
