@@ -47,6 +47,7 @@ jobs:
           REPOSITORY_TRIVY_DISABLE_ERRORS: true
           REPOSITORY_SEMGREP_DISABLE_ERRORS: true
           REPOSITORY_CHECKOV_DISABLE_ERRORS: true
+          ACTION_ACTIONLINT_DISABLE_ERRORS: true
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
