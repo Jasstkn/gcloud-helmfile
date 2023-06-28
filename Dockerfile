@@ -6,7 +6,8 @@ ARG HELM_DIFF_VERSION=3.4.2
 ARG HELMFILE_VERSION=0.145.2
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache ca-certificates git bash curl jq
+RUN apk add --no-cache ca-certificates git bash curl jq \
+    && gcloud components install gke-gcloud-auth-plugin --quiet --verbosity=none
 
 ADD https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 
