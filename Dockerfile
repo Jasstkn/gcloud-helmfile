@@ -23,4 +23,6 @@ ADD https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VERSION}/
 
 RUN chmod 0755 /bin/helmfile
 
+RUN gcloud components install gke-gcloud-auth-plugin --quiet --verbosity=none
+
 CMD ["/usr/local/bin/helmfile", "--help"]
