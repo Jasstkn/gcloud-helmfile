@@ -6,7 +6,8 @@ ARG HELM_DIFF_VERSION=3.4.2
 ARG HELMFILE_VERSION=0.145.2
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache ca-certificates git bash curl jq
+RUN apk add --no-cache ca-certificates git bash curl jq \
+    && gcloud components install gke-gcloud-auth-plugin --quiet --verbosity=none
 
 ADD https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 
@@ -22,7 +23,5 @@ RUN tar -zxvf /tmp/helm* -C /tmp \
 ADD https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_${HELMFILE_VERSION}_linux_amd64.tar.gz /bin/helmfile
 
 RUN chmod 0755 /bin/helmfile
-
-RUN gcloud components install gke-gcloud-auth-plugin --quiet --verbosity=none
 
 CMD ["/usr/local/bin/helmfile", "--help"]
