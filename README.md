@@ -7,6 +7,7 @@
 
 ## Installation
 - gcloud
+- gke-gcloud-auth-plugin
 - kubectl
 - helm
 - helm-diff
