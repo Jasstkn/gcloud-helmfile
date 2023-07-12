@@ -55,5 +55,6 @@ jobs:
         ignore-unfixed: true
         vuln-type: 'os,library'
         severity: 'CRITICAL'
+        timeout: '10m0s'
       env:
         TRIVY_OFFLINE_SCAN: true
