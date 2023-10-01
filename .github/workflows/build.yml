@@ -38,7 +38,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         logout: false
     - name: Build and push
-      uses: docker/build-push-action@v4.1.1
+      uses: docker/build-push-action@v5.0.0
       with:
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.prep.outputs.tags }}
